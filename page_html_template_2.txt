@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+  body {font-family:'Roboto' !important}
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-1">&#8203;</div>
+<div class="col-md-10">
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center">{{reg}}</h1>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md">
+    <table class="table">
+      <tr>
+        <td style="font-size: 16px;font-weight:bold">Место в рейтинге</td>
+        <td style="font-size: 16px;font-weight:bold">{{res_r}}</td>
+        <td rowspan="5" style="text-align: center"><img src="data:image/png;base64,{{ img_string }}"></td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px;font-weight:bold">Индекс гендерного разрыва</td>
+        <td style="font-size: 16px;font-weight:bold">{{res}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Численность населения (тыс. чел)</td>
+        <td style="font-size: 16px">{{num}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Доля женщин (%)</td>
+        <td style="font-size: 16px">{{num_fm}}</td>
+      </tr>
+      
+    </table>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md" align="center">
+    <table class="table">
+      <colgroup>
+         <col span="1" style="width: 45%;">
+         <col span="1" style="width: 10%;">
+         <col span="1" style="width: 10%;">
+      </colgroup>
+      <tr style="font-size: 16px; border-bottom: 1pt solid black; font-style:italic">
+        <td>Показатель</td>
+        <td>Место</td>
+        <td>Индекс</td>
+      </tr>
+      <tr style="border-bottom: 1pt solid black">
+        <td style="font-size: 16px;font-weight:bold">Экономическое участие и возможности</td>
+        <td style="font-weight:bold">{{sub_1_r}}</td>
+        <td style="font-weight:bold">{{sub_1}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Участие в рабочей силе</td>
+        <td>{{sub_11_r}}</td>
+        <td>{{sub_11}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Средняя заработная плата</td>
+        <td>{{sub_12_r}}</td>
+        <td>{{sub_12}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Руководящие должности</td>
+        <td>{{sub_13_r}}</td>
+        <td>{{sub_13}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Высококвалифицированные специалисты</td>
+        <td>{{sub_14_r}}</td>
+        <td>{{sub_14}}</td>
+      </tr>
+      <tr style="border-top: 1pt solid black; border-bottom: 1pt solid black">
+        <td style="font-size: 16px;font-weight:bold">Уровень образования</td>
+        <td style="font-weight:bold">{{sub_2_r}}</td>
+        <td style="font-weight:bold">{{sub_2}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Основное общее образование (9 классов)</td>
+        <td>{{sub_21_r}}</td>
+        <td>{{sub_21}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Основное общее образование (11 классов)</td>
+        <td>{{sub_22_r}}</td>
+        <td>{{sub_22}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Высшее образование</td>
+        <td>{{sub_23_r}}</td>
+        <td>{{sub_23}}</td>
+      </tr>
+      <tr style="border-top: 1pt solid black; border-bottom: 1pt solid black">
+        <td style="font-size: 16px;font-weight:bold">Здоровье и выживание</td>
+        <td style="font-weight:bold">{{sub_3_r}}</td>
+        <td style="font-weight:bold">{{sub_3}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Ожидаемая продолжительность жизни</td>
+        <td>{{sub_31_r}}</td>
+        <td>{{sub_31}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Численность при рождении</td>
+        <td>{{sub_32_r}}</td>
+        <td>{{sub_32}}</td>
+      </tr>
+      <tr style="border-top: 1pt solid black; border-bottom: 1pt solid black">
+        <td style="font-size: 16px;font-weight:bold">Политические возможности</td>
+        <td style="font-weight:bold">{{sub_4_r}}</td>
+        <td style="font-weight:bold">{{sub_4}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Должности в федеральных органах</td>
+        <td>{{sub_41_r}}</td>
+        <td>{{sub_41}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Должности в органах судебной власти</td>
+        <td>{{sub_42_r}}</td>
+        <td>{{sub_42}}</td>
+      </tr>
+      <tr>
+        <td style="font-size: 16px">Должности муниципальной службы</td>
+        <td>{{sub_43_r}}</td>
+        <td>{{sub_43}}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+</div>
+<div class="col-md-1">&#8203;</div>
+</div>
+</div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
